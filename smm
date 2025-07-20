@@ -1,0 +1,2000 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-paint {
+    contain: paint;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "ViralKazi Uganda - #1 SMM Panel | Buy Instagram Followers, YouTube Views & More",
+  description:
+    "Leading SMM panel in Uganda offering real Instagram followers, YouTube views, TikTok fans, and Facebook likes. Instant delivery, 24/7 support, affordable prices in UGX. Boost your social media presence today!",
+  keywords: [
+    "SMM panel Uganda",
+    "buy Instagram followers Uganda",
+    "YouTube views Uganda",
+    "TikTok followers Uganda",
+    "Facebook likes Uganda",
+    "social media marketing Uganda",
+    "Instagram growth Uganda",
+    "cheap SMM services",
+    "real followers Uganda",
+    "social media panel",
+    "buy social media followers",
+    "Instagram marketing Uganda",
+    "YouTube marketing Uganda",
+    "social media boost",
+    "SMM services Kampala",
+    "buy likes and followers",
+    "social media growth",
+    "Uganda SMM panel",
+    "mobile money SMM",
+    "Airtel money social media",
+  ],
+  authors: [{ name: "ViralKazi Uganda" }],
+  creator: "ViralKazi Uganda",
+  publisher: "ViralKazi Uganda",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_UG",
+    url: "https://viralkazi.ug",
+    siteName: "ViralKazi Uganda",
+    title: "ViralKazi Uganda - #1 SMM Panel | Buy Instagram Followers, YouTube Views & More",
+    description:
+      "Leading SMM panel in Uganda offering real Instagram followers, YouTube views, TikTok fans, and Facebook likes. Instant delivery, 24/7 support, affordable prices in UGX.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ViralKazi Uganda - SMM Panel Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ViralKazi Uganda - #1 SMM Panel | Buy Instagram Followers, YouTube Views & More",
+    description:
+      "Leading SMM panel in Uganda offering real Instagram followers, YouTube views, TikTok fans, and Facebook likes. Instant delivery, 24/7 support, affordable prices in UGX.",
+    images: ["/twitter-image.jpg"],
+    creator: "@ViralKaziUG",
+  },
+  alternates: {
+    canonical: "https://viralkazi.ug",
+  },
+  category: "Social Media Marketing",
+  classification: "Business",
+  other: {
+    "geo.region": "UG",
+    "geo.placename": "Uganda",
+    "geo.position": "1.3733;32.2903",
+    ICBM: "1.3733, 32.2903",
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="canonical" href="https://viralkazi.ug" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#7c3aed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "ViralKazi Uganda",
+              alternateName: "ViralKazi",
+              url: "https://viralkazi.ug",
+              logo: "https://viralkazi.ug/logo.png",
+              description:
+                "Leading SMM panel in Uganda offering real Instagram followers, YouTube views, TikTok fans, and Facebook likes with instant delivery and 24/7 support.",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "UG",
+                addressRegion: "Central Region",
+                addressLocality: "Kampala",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                availableLanguage: ["English", "Luganda"],
+                hoursAvailable: "Mo-Su 00:00-23:59",
+              },
+              sameAs: [
+                "https://facebook.com/viralkaziug",
+                "https://twitter.com/viralkaziug",
+                "https://instagram.com/viralkaziug",
+              ],
+              priceRange: "15000-300000 UGX",
+              paymentAccepted: ["Mobile Money", "Bank Transfer", "MTN Mobile Money", "Airtel Money"],
+              currenciesAccepted: "UGX",
+            }),
+          }}
+        />
+
+        {/* Service Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: "Social Media Marketing Services",
+              description:
+                "Professional SMM panel services including Instagram followers, YouTube views, TikTok fans, and Facebook likes for businesses and individuals in Uganda.",
+              provider: {
+                "@type": "Organization",
+                name: "ViralKazi Uganda",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "Uganda",
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "SMM Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Instagram Followers",
+                    },
+                    price: "15000",
+                    priceCurrency: "UGX",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "YouTube Views",
+                    },
+                    price: "20000",
+                    priceCurrency: "UGX",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "TikTok Followers",
+                    },
+                    price: "18000",
+                    priceCurrency: "UGX",
+                  },
+                ],
+              },
+            }),
+          }}
+        />
+
+        {/* FAQ Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Are the followers real people?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, all our followers are real accounts. We don't use bots or fake accounts, which ensures that your engagement rates remain high and your account stays safe.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How long does delivery take?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Most orders start processing immediately after payment confirmation. Depending on the package size, delivery can take anywhere from a few hours to 2-3 days for larger orders.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What payment methods do you accept?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We accept Ugandan Shillings through Mobile Money (MTN and Airtel) and bank transfers. All transactions are secure and processed quickly.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+import type { MetadataRoute } from "next"
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: "SocialBoost Uganda - SMM Panel",
+    short_name: "SocialBoost UG",
+    description: "Uganda's leading SMM panel for Instagram followers, YouTube views, TikTok fans, and Facebook likes",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#7c3aed",
+    icons: [
+      {
+        src: "/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  }
+}
+import { Button } from "@/components/ui/button"
+import { ChevronRight, CheckCircle, Star, ArrowRight, Instagram, Facebook, Twitter, TrendingUp } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { FeatureCard } from "@/components/feature-card"
+import { TestimonialCard } from "@/components/testimonial-card"
+import { PaymentMethods } from "@/components/payment-methods"
+import { PricingSection } from "@/components/pricing-section"
+import { SupportSection } from "@/components/support-section"
+import { FloatingSupportWidget } from "@/components/floating-support-widget"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "ViralKazi Uganda - Best SMM Panel | Buy Instagram Followers, YouTube Views",
+  description:
+    "Uganda's leading SMM panel offering real Instagram followers, YouTube views, TikTok fans & Facebook likes. Instant delivery, 24/7 support, Mobile Money payments. Start from 15,000 UGX!",
+  keywords:
+    "SMM panel Uganda, buy Instagram followers Uganda, YouTube views Uganda, TikTok followers, Facebook likes, social media marketing Uganda, cheap SMM services, real followers Uganda",
+  openGraph: {
+    title: "ViralKazi Uganda - Best SMM Panel | Buy Instagram Followers, YouTube Views",
+    description:
+      "Uganda's leading SMM panel offering real Instagram followers, YouTube views, TikTok fans & Facebook likes. Instant delivery, 24/7 support, Mobile Money payments.",
+    url: "https://viralkazi.ug",
+    type: "website",
+  },
+}
+
+export default function Home() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      {/* Header */}
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <TrendingUp className="h-6 w-6 text-purple-600" />
+            <span className="text-xl font-bold">ViralKazi</span>
+          </div>
+          <nav className="hidden md:flex items-center gap-6" role="navigation" aria-label="Main navigation">
+            <Link href="#services" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              SMM Services
+            </Link>
+            <Link href="#pricing" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              Pricing
+            </Link>
+            <Link href="#support" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              24/7 Support
+            </Link>
+            <Link href="#faq" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              FAQ
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Button variant="outline" className="hidden sm:flex bg-transparent">
+              Log In
+            </Button>
+            <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Get Started</Button>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white py-20 md:py-32">
+          <div className="container relative z-10">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+              <div className="space-y-6">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-800 to-indigo-700">
+                  Uganda's #1 SMM Panel - Go Viral with ViralKazi
+                </h1>
+                <p className="max-w-[600px] text-gray-600 md:text-xl">
+                  Get real Instagram followers, YouTube views, TikTok fans, and Facebook likes from Uganda's most
+                  trusted SMM panel. Instant delivery with 24/7 live chat support at affordable prices in UGX.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                    Start Growing Now <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button size="lg" variant="outline">
+                    View SMM Pricing
+                  </Button>
+                </div>
+                <div className="flex items-center gap-4 pt-4">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="h-8 w-8 rounded-full bg-gray-200 border-2 border-white" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    <span className="font-bold text-purple-700">5,000+</span> satisfied customers in Uganda
+                  </p>
+                </div>
+                {/* Support Guarantee */}
+                <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg">
+                  <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-green-800">24/7 Support Team Online Now</span>
+                </div>
+              </div>
+              <div className="relative mx-auto lg:mr-0">
+                <div className="relative">
+                  <Image
+                    src="/images/smm-heart-hand.jpg"
+                    width={600}
+                    height={500}
+                    alt="ViralKazi Uganda SMM Panel - Social Media Marketing with care and engagement, representing our commitment to growing your social media presence with real followers and likes"
+                    className="rounded-xl shadow-2xl"
+                    priority
+                    loading="eager"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-6 h-24 w-48 rounded-lg bg-white p-4 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">Delivery Status</p>
+                      <p className="font-medium">Order Completed</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -right-6 -top-6 h-24 w-48 rounded-lg bg-white p-4 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                      <Star className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">Followers Gained</p>
+                      <p className="font-medium">+2,500 Today</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Overview Section */}
+        <section id="services" className="py-20">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Premium SMM Services in Uganda
+              </h2>
+              <p className="mt-4 text-gray-600 md:text-xl max-w-2xl mx-auto">
+                Boost your social media presence with our premium SMM panel services. Real followers, instant delivery,
+                and affordable prices in UGX.
+              </p>
+            </div>
+
+            {/* Services Visual Grid */}
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
+              <div className="text-center group">
+                <div className="relative mb-4">
+                  <Image
+                    src="/placeholder.svg?height=200&width=200&text=Instagram+Growth+Vector+Illustration+with+followers+and+likes+icons"
+                    width={200}
+                    height={200}
+                    alt="Instagram Growth Services - Buy Real Instagram Followers Uganda"
+                    className="mx-auto rounded-lg group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Instagram Growth</h3>
+                <p className="text-gray-600 text-sm">Real followers, likes, and engagement</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="relative mb-4">
+                  <Image
+                    src="/placeholder.svg?height=200&width=200&text=YouTube+Marketing+Vector+with+play+button+and+view+counter+analytics"
+                    width={200}
+                    height={200}
+                    alt="YouTube Marketing Services - Buy YouTube Views Uganda"
+                    className="mx-auto rounded-lg group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h3 className="font-bold text-lg mb-2">YouTube Marketing</h3>
+                <p className="text-gray-600 text-sm">High-retention views and subscribers</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="relative mb-4">
+                  <Image
+                    src="/placeholder.svg?height=200&width=200&text=TikTok+Viral+Content+Vector+with+trending+hashtags+and+engagement+metrics"
+                    width={200}
+                    height={200}
+                    alt="TikTok Marketing Services - Buy TikTok Followers Uganda"
+                    className="mx-auto rounded-lg group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h3 className="font-bold text-lg mb-2">TikTok Viral</h3>
+                <p className="text-gray-600 text-sm">Trending followers and viral reach</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="relative mb-4">
+                  <Image
+                    src="/placeholder.svg?height=200&width=200&text=Facebook+Business+Growth+Vector+with+likes+shares+and+engagement+icons"
+                    width={200}
+                    height={200}
+                    alt="Facebook Marketing Services - Buy Facebook Likes Uganda"
+                    className="mx-auto rounded-lg group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Facebook Business</h3>
+                <p className="text-gray-600 text-sm">Page likes and post engagement</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                View All SMM Services <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <div id="pricing">
+          <PricingSection />
+        </div>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-gradient-to-b from-white to-purple-50">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Why Choose ViralKazi Uganda SMM Panel?
+              </h2>
+              <p className="mt-4 text-gray-600 md:text-xl max-w-2xl mx-auto">
+                We provide the best social media marketing services in Uganda with unmatched quality and support
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <FeatureCard
+                title="100% Real Followers"
+                description="All our followers are real people, not bots, ensuring genuine engagement and account safety."
+                iconColor="text-purple-600"
+                iconBgColor="bg-purple-100"
+              />
+              <FeatureCard
+                title="24/7 Live Chat Support"
+                description="Our customer support team is available around the clock via live chat to assist you instantly."
+                iconColor="text-indigo-600"
+                iconBgColor="bg-indigo-100"
+              />
+              <FeatureCard
+                title="Instant Delivery"
+                description="Most SMM orders start processing immediately and complete within 24 hours or less."
+                iconColor="text-blue-600"
+                iconBgColor="bg-blue-100"
+              />
+              <FeatureCard
+                title="Affordable UGX Prices"
+                description="Competitive SMM pricing with special discounts for bulk orders. Pay with Mobile Money."
+                iconColor="text-green-600"
+                iconBgColor="bg-green-100"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Social Media Marketing Illustration Section */}
+        <section className="py-20">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-6">
+                  Transform Your Social Media Presence
+                </h2>
+                <p className="text-gray-600 md:text-lg mb-6">
+                  Join thousands of successful businesses and influencers who have grown their social media presence
+                  with ViralKazi. Our proven SMM strategies deliver real results that matter.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-3 w-3" />
+                    </div>
+                    <span>Increase brand visibility and reach</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-3 w-3" />
+                    </div>
+                    <span>Build credibility and social proof</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-3 w-3" />
+                    </div>
+                    <span>Drive more engagement and conversions</span>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/images/smm-heart-hand.jpg"
+                  width={500}
+                  height={400}
+                  alt="Social Media Marketing with Care - ViralKazi's commitment to providing genuine engagement and building meaningful connections for your brand"
+                  className="rounded-xl shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Support Section */}
+        <div id="support">
+          <SupportSection />
+        </div>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-20">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                What Our Uganda Customers Say
+              </h2>
+              <p className="mt-4 text-gray-600 md:text-xl max-w-2xl mx-auto">
+                Don't just take our word for it - hear from our satisfied SMM panel customers across Uganda
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <TestimonialCard
+                name="Sarah K."
+                role="Fashion Influencer, Kampala"
+                content="I gained over 5,000 real Instagram followers in just one week using ViralKazi Uganda! The engagement on my posts has increased dramatically. The support team was incredibly helpful throughout the process, resolving my query via live chat in minutes."
+                rating={5}
+              />
+              <TestimonialCard
+                name="David M."
+                role="YouTube Creator, Entebbe"
+                content="My channel views doubled after using ViralKazi's SMM services. The customer support was excellent and responsive - they answered all my questions within minutes via live chat! Best SMM panel in Uganda."
+                rating={5}
+              />
+              <TestimonialCard
+                name="Rebecca T."
+                role="Small Business Owner, Jinja"
+                content="The Facebook likes I purchased helped establish credibility for my new business page. When I had an issue, their 24/7 support resolved it immediately via live chat. Will definitely use this SMM panel again!"
+                rating={4}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 bg-gradient-to-b from-purple-50 to-white">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">SMM Panel FAQ - Uganda</h2>
+              <p className="mt-4 text-gray-600 md:text-xl max-w-2xl mx-auto">
+                Find answers to common questions about our SMM panel services in Uganda
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Are the followers from your SMM panel real people?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, all our followers from our SMM panel are real accounts. We don't use bots or fake accounts,
+                    which ensures that your engagement rates remain high and your account stays safe from social media
+                    platform penalties.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How long does SMM service delivery take?</AccordionTrigger>
+                  <AccordionContent>
+                    Most SMM orders start processing immediately after payment confirmation. Depending on the package
+                    size, delivery can take anywhere from a few hours to 2-3 days for larger orders. Instagram followers
+                    typically deliver within 24 hours.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Is my social media account information safe?</AccordionTrigger>
+                  <AccordionContent>
+                    Absolutely. Our SMM panel only requires public information like your username or post URL. We never
+                    ask for passwords or sensitive information. Your account security is our top priority.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>What payment methods do you accept in Uganda?</AccordionTrigger>
+                  <AccordionContent>
+                    We accept Ugandan Shillings through Mobile Money (MTN and Airtel) and bank transfers. All
+                    transactions are secure and processed quickly. We're the only SMM panel in Uganda that accepts local
+                    payment methods.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>How can I contact SMM panel customer support?</AccordionTrigger>
+                  <AccordionContent>
+                    Our 24/7 support team is available through live chat on our website. We typically respond within 2
+                    minutes and resolve 99.8% of SMM service issues on the first contact. No waiting, instant help.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>Do you offer refunds for SMM services?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we offer a money-back guarantee if we fail to deliver your SMM order within the specified
+                    timeframe. Please contact our support team for assistance with refunds. Customer satisfaction is
+                    guaranteed.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container">
+            <div className="rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 p-8 md:p-12 shadow-xl">
+              <div className="grid gap-8 md:grid-cols-2 items-center">
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl">
+                    Ready to Go Viral with Uganda's Best SMM Panel?
+                  </h2>
+                  <p className="text-purple-100 md:text-xl">
+                    Get started today and see the difference quality social media marketing can make for your brand.
+                    Join thousands of satisfied customers across Uganda.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100">
+                      Start Your SMM Journey
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-white border-white hover:bg-purple-700 bg-transparent"
+                    >
+                      Contact SMM Experts
+                    </Button>
+                  </div>
+                </div>
+                <div className="relative mx-auto">
+                  <Image
+                    src="/images/smm-heart-hand.jpg"
+                    width={400}
+                    height={300}
+                    alt="ViralKazi SMM Panel - Social Media Marketing with genuine care and engagement for your brand's success"
+                    className="rounded-xl shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t bg-gray-50">
+        <div className="container py-12">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <TrendingUp className="h-6 w-6 text-purple-600" />
+                <span className="text-xl font-bold">ViralKazi Uganda</span>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Uganda's premier SMM panel offering premium social media marketing services to help you grow your online
+                presence across all platforms.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://instagram.com/viralkaziug"
+                  className="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-200 transition-colors"
+                  aria-label="Follow ViralKazi Uganda on Instagram"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://facebook.com/viralkaziug"
+                  className="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-200 transition-colors"
+                  aria-label="Follow ViralKazi Uganda on Facebook"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://twitter.com/viralkaziug"
+                  className="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-200 transition-colors"
+                  aria-label="Follow ViralKazi Uganda on Twitter"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">SMM Services</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    Instagram Services Uganda
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    Facebook Services Uganda
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    YouTube Services Uganda
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    TikTok Services Uganda
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    X (Twitter) Services Uganda
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">24/7 Support</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#support" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    24/7 Live Chat Support
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    SMM Help Center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#faq" className="text-gray-600 hover:text-purple-600 transition-colors">
+                    SMM Panel FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Payment Methods (UGX)</h3>
+              <PaymentMethods />
+              <p className="text-gray-600 mt-4">
+                Secure payments processed in Ugandan Shillings (UGX). Mobile Money accepted.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t text-center text-gray-600">
+            <p>&copy; {new Date().getFullYear()} ViralKazi Uganda - Best SMM Panel in Uganda. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Floating Support Widget */}
+      <FloatingSupportWidget />
+    </div>
+  )
+}
+import type { MetadataRoute } from "next"
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/admin/", "/api/", "/private/"],
+    },
+    sitemap: "https://socialboost.ug/sitemap.xml",
+  }
+}
+import type { MetadataRoute } from "next"
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: "https://socialboost.ug",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: "https://socialboost.ug/services",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://socialboost.ug/pricing",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://socialboost.ug/instagram-followers",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://socialboost.ug/youtube-views",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://socialboost.ug/tiktok-followers",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://socialboost.ug/facebook-likes",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://socialboost.ug/support",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://socialboost.ug/faq",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+  ]
+}
+import { Card, CardContent } from "@/components/ui/card"
+import { CheckCircle } from "lucide-react"
+
+interface FeatureCardProps {
+  title: string
+  description: string
+  iconColor?: string
+  iconBgColor?: string
+}
+
+export function FeatureCard({
+  title,
+  description,
+  iconColor = "text-purple-600",
+  iconBgColor = "bg-purple-100",
+}: FeatureCardProps) {
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-none">
+      <CardContent className="p-6 flex flex-col items-center text-center">
+        <div className={`h-12 w-12 rounded-full ${iconBgColor} flex items-center justify-center ${iconColor} mb-4`}>
+          <CheckCircle className="h-6 w-6" />
+        </div>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+      </CardContent>
+    </Card>
+  )
+}
+"use client"
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { MessageCircle, X, Headphones, Clock } from "lucide-react"
+
+export function FloatingSupportWidget() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      {/* Floating Support Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        {!isOpen && (
+          <Button
+            onClick={() => setIsOpen(true)}
+            className="h-14 w-14 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg hover:shadow-xl transition-all animate-bounce"
+          >
+            <MessageCircle className="h-6 w-6" />
+          </Button>
+        )}
+
+        {/* Support Widget */}
+        {isOpen && (
+          <Card className="w-80 shadow-2xl border-0 bg-white">
+            <CardHeader className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-t-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <Headphones className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-sm">ViralKazi 24/7 Support</CardTitle>
+                    <div className="flex items-center gap-1">
+                      <div className="h-2 w-2 bg-green-300 rounded-full animate-pulse"></div>
+                      <span className="text-xs opacity-90">Online now</span>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:bg-white/20 h-8 w-8 p-0"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="space-y-4">
+                <div className="text-center mb-4">
+                  <p className="text-sm text-gray-600">Hi! 👋 How can ViralKazi help you today?</p>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <Clock className="h-3 w-3 text-green-600" />
+                    <span className="text-xs text-green-600">Avg. response: 2 minutes</span>
+                  </div>
+                </div>
+
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-white justify-center py-6">
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  Start Live Chat
+                </Button>
+
+                <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="h-2 w-2 bg-green-500 rounded-full"></div>
+                    <span className="text-xs font-medium text-green-800">Why choose ViralKazi support?</span>
+                  </div>
+                  <ul className="text-xs text-green-700 space-y-1">
+                    <li>• Instant responses</li>
+                    <li>• Expert SMM agents</li>
+                    <li>• Real-time problem solving</li>
+                    <li>• Available 24/7</li>
+                  </ul>
+                </div>
+
+                <div className="pt-3 border-t">
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <span>15+ agents online</span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs">
+                      Fast Response
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    </>
+  )
+}
+import { Smartphone, Building } from "lucide-react"
+
+export function PaymentMethods() {
+  return (
+    <div className="flex flex-wrap gap-3">
+      <div className="flex items-center gap-2 rounded-md border bg-background px-3 py-2">
+        <Smartphone className="h-4 w-4 text-purple-600" />
+        <span className="text-sm">MTN Mobile Money</span>
+      </div>
+      <div className="flex items-center gap-2 rounded-md border bg-background px-3 py-2">
+        <Smartphone className="h-4 w-4 text-red-600" />
+        <span className="text-sm">Airtel Money</span>
+      </div>
+      <div className="flex items-center gap-2 rounded-md border bg-background px-3 py-2">
+        <Building className="h-4 w-4 text-blue-600" />
+        <span className="text-sm">Bank Transfer</span>
+      </div>
+    </div>
+  )
+}
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Check, Star, Zap, Crown } from "lucide-react"
+
+const pricingData = [
+  {
+    category: "Instagram Services",
+    icon: "📸",
+    services: [
+      {
+        name: "Instagram Followers",
+        packages: [
+          {
+            name: "Starter",
+            followers: "500",
+            price: "15,000",
+            originalPrice: "20,000",
+            features: ["Real Active Followers", "24-48h Delivery", "No Password Required", "Lifetime Guarantee"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Growth",
+            followers: "1,000",
+            price: "25,000",
+            originalPrice: "35,000",
+            features: [
+              "Real Active Followers",
+              "12-24h Delivery",
+              "No Password Required",
+              "Lifetime Guarantee",
+              "Priority Support",
+            ],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Pro",
+            followers: "5,000",
+            price: "100,000",
+            originalPrice: "150,000",
+            features: [
+              "Real Active Followers",
+              "6-12h Delivery",
+              "No Password Required",
+              "Lifetime Guarantee",
+              "Priority Support",
+              "Bonus Likes",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+      {
+        name: "Instagram Likes",
+        packages: [
+          {
+            name: "Basic",
+            followers: "100",
+            price: "5,000",
+            originalPrice: "8,000",
+            features: ["Real Likes", "Instant Start", "High Quality", "Safe & Secure"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Standard",
+            followers: "500",
+            price: "20,000",
+            originalPrice: "30,000",
+            features: ["Real Likes", "Instant Start", "High Quality", "Safe & Secure", "24/7 Support"],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Premium",
+            followers: "1,000",
+            price: "35,000",
+            originalPrice: "50,000",
+            features: [
+              "Real Likes",
+              "Instant Start",
+              "High Quality",
+              "Safe & Secure",
+              "24/7 Support",
+              "Refill Guarantee",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "YouTube Services",
+    icon: "🎥",
+    services: [
+      {
+        name: "YouTube Views",
+        packages: [
+          {
+            name: "Starter",
+            followers: "1,000",
+            price: "20,000",
+            originalPrice: "25,000",
+            features: ["High Retention Views", "24-48h Delivery", "Safe & Secure", "No Drop Guarantee"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Popular",
+            followers: "5,000",
+            price: "80,000",
+            originalPrice: "120,000",
+            features: [
+              "High Retention Views",
+              "12-24h Delivery",
+              "Safe & Secure",
+              "No Drop Guarantee",
+              "Priority Support",
+            ],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Viral",
+            followers: "10,000",
+            price: "150,000",
+            originalPrice: "200,000",
+            features: [
+              "High Retention Views",
+              "6-12h Delivery",
+              "Safe & Secure",
+              "No Drop Guarantee",
+              "Priority Support",
+              "Bonus Likes",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+      {
+        name: "YouTube Subscribers",
+        packages: [
+          {
+            name: "Basic",
+            followers: "100",
+            price: "30,000",
+            originalPrice: "40,000",
+            features: ["Real Subscribers", "Gradual Delivery", "Safe Method", "Lifetime Guarantee"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Growth",
+            followers: "500",
+            price: "120,000",
+            originalPrice: "180,000",
+            features: ["Real Subscribers", "Gradual Delivery", "Safe Method", "Lifetime Guarantee", "24/7 Support"],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Pro",
+            followers: "1,000",
+            price: "220,000",
+            originalPrice: "300,000",
+            features: [
+              "Real Subscribers",
+              "Gradual Delivery",
+              "Safe Method",
+              "Lifetime Guarantee",
+              "24/7 Support",
+              "Watch Time Bonus",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "TikTok & X Services",
+    icon: "🎵",
+    services: [
+      {
+        name: "TikTok Followers",
+        packages: [
+          {
+            name: "Starter",
+            followers: "500",
+            price: "18,000",
+            originalPrice: "25,000",
+            features: ["Real Active Users", "24-48h Delivery", "Safe & Secure", "No Password Needed"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Trending",
+            followers: "1,000",
+            price: "32,000",
+            originalPrice: "45,000",
+            features: [
+              "Real Active Users",
+              "12-24h Delivery",
+              "Safe & Secure",
+              "No Password Needed",
+              "Priority Support",
+            ],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Viral",
+            followers: "5,000",
+            price: "140,000",
+            originalPrice: "200,000",
+            features: [
+              "Real Active Users",
+              "6-12h Delivery",
+              "Safe & Secure",
+              "No Password Needed",
+              "Priority Support",
+              "Bonus Views",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+      {
+        name: "X (Twitter) Followers",
+        packages: [
+          {
+            name: "Basic",
+            followers: "500",
+            price: "16,000",
+            originalPrice: "22,000",
+            features: ["Real Profiles", "24-48h Delivery", "Safe Method", "Lifetime Guarantee"],
+            popular: false,
+            icon: <Zap className="h-4 w-4" />,
+          },
+          {
+            name: "Growth",
+            followers: "1,000",
+            price: "28,000",
+            originalPrice: "40,000",
+            features: ["Real Profiles", "12-24h Delivery", "Safe Method", "Lifetime Guarantee", "24/7 Support"],
+            popular: true,
+            icon: <Star className="h-4 w-4" />,
+          },
+          {
+            name: "Premium",
+            followers: "5,000",
+            price: "120,000",
+            originalPrice: "180,000",
+            features: [
+              "Real Profiles",
+              "6-12h Delivery",
+              "Safe Method",
+              "Lifetime Guarantee",
+              "24/7 Support",
+              "Engagement Boost",
+            ],
+            popular: false,
+            icon: <Crown className="h-4 w-4" />,
+          },
+        ],
+      },
+    ],
+  },
+]
+
+export function PricingSection() {
+  return (
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="container">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Clear & Transparent Pricing</h2>
+          <p className="mt-4 text-gray-600 md:text-xl max-w-3xl mx-auto">
+            No hidden fees, no surprises. Choose the perfect package for your needs with our straightforward pricing in
+            Ugandan Shillings.
+          </p>
+          <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-green-600" />
+              <span>Money Back Guarantee</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-green-600" />
+              <span>Secure Payment</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-green-600" />
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+
+        {pricingData.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
+                <span className="text-2xl">{category.icon}</span>
+                {category.category}
+              </h3>
+            </div>
+
+            {category.services.map((service, serviceIndex) => (
+              <div key={serviceIndex} className="mb-12">
+                <h4 className="text-xl font-semibold text-center mb-6 text-gray-800">{service.name}</h4>
+                <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+                  {service.packages.map((pkg, pkgIndex) => (
+                    <Card
+                      key={pkgIndex}
+                      className={`relative overflow-hidden transition-all hover:shadow-xl ${
+                        pkg.popular
+                          ? "border-purple-500 shadow-lg scale-105"
+                          : "border-gray-200 hover:border-purple-300"
+                      }`}
+                    >
+                      {pkg.popular && (
+                        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-2 text-sm font-medium">
+                          Most Popular
+                        </div>
+                      )}
+                      <CardHeader className={`text-center ${pkg.popular ? "pt-12" : "pt-6"}`}>
+                        <div className="flex items-center justify-center mb-2">
+                          <div
+                            className={`h-10 w-10 rounded-full flex items-center justify-center ${
+                              pkg.popular ? "bg-purple-100 text-purple-600" : "bg-gray-100 text-gray-600"
+                            }`}
+                          >
+                            {pkg.icon}
+                          </div>
+                        </div>
+                        <CardTitle className="text-lg font-bold">{pkg.name}</CardTitle>
+                        <div className="space-y-1">
+                          <div className="text-3xl font-bold text-purple-700">
+                            {pkg.price} <span className="text-sm font-normal text-gray-600">UGX</span>
+                          </div>
+                          <div className="text-sm text-gray-500 line-through">{pkg.originalPrice} UGX</div>
+                          <div className="text-sm font-medium text-gray-700">
+                            {pkg.followers}{" "}
+                            {service.name.includes("Likes")
+                              ? "Likes"
+                              : service.name.includes("Views")
+                                ? "Views"
+                                : service.name.includes("Subscribers")
+                                  ? "Subscribers"
+                                  : "Followers"}
+                          </div>
+                          <Badge variant="secondary" className="bg-green-100 text-green-700">
+                            Save{" "}
+                            {Math.round(
+                              ((Number.parseInt(pkg.originalPrice.replace(",", "")) -
+                                Number.parseInt(pkg.price.replace(",", ""))) /
+                                Number.parseInt(pkg.originalPrice.replace(",", ""))) *
+                                100,
+                            )}
+                            %
+                          </Badge>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <ul className="space-y-3 mb-6">
+                          {pkg.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center gap-2 text-sm">
+                              <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Button
+                          className={`w-full ${
+                            pkg.popular
+                              ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
+                              : "bg-white border border-purple-600 text-purple-600 hover:bg-purple-50"
+                          }`}
+                        >
+                          Order Now
+                        </Button>
+                        <p className="text-xs text-gray-500 text-center mt-2">Instant processing • Secure payment</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+
+        {/* Custom Package CTA */}
+        <div className="mt-16 text-center">
+          <Card className="max-w-2xl mx-auto bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Need a Custom Package?</h3>
+              <p className="text-gray-600 mb-6">
+                Looking for something specific or need bulk orders? We can create a custom package tailored to your
+                exact needs with special pricing.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Get Custom Quote</Button>
+                <Button variant="outline" className="border-purple-600 text-purple-600 bg-transparent">
+                  Contact Sales Team
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Pricing Notes */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <h4 className="font-semibold text-blue-900 mb-3">💡 Pricing Information</h4>
+            <div className="grid gap-3 md:grid-cols-2 text-sm text-blue-800">
+              <div className="flex items-start gap-2">
+                <Check className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <span>All prices are in Ugandan Shillings (UGX)</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <span>No setup fees or hidden charges</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <span>Bulk discounts available for large orders</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Check className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <span>Refund available if delivery fails</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import type { ReactNode } from "react"
+
+interface ServiceCardProps {
+  icon: ReactNode
+  title: string
+  description: string
+  price: string
+}
+
+export function ServiceCard({ icon, title, description, price }: ServiceCardProps) {
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg">
+      <CardHeader className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div className="h-12 w-12 rounded-full bg-white shadow-sm flex items-center justify-center text-purple-600">
+          {icon}
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-500">Starting from</span>
+          <span className="font-bold text-purple-700">{price}</span>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import type { ReactNode } from "react"
+
+interface ServiceCardProps {
+  icon: ReactNode
+  title: string
+  description: string
+  price: string
+}
+
+export function ServiceCard({ icon, title, description, price }: ServiceCardProps) {
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg">
+      <CardHeader className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div className="h-12 w-12 rounded-full bg-white shadow-sm flex items-center justify-center text-purple-600">
+          {icon}
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-500">Starting from</span>
+          <span className="font-bold text-purple-700">{price}</span>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { MessageCircle, Clock, Headphones, Users, Zap, CheckCircle, Globe } from "lucide-react"
+
+const supportStats = [
+  {
+    icon: <Clock className="h-8 w-8" />,
+    title: "Average Response Time",
+    value: "2 minutes",
+    description: "We respond to 95% of inquiries within 2 minutes",
+  },
+  {
+    icon: <Users className="h-8 w-8" />,
+    title: "Support Agents",
+    value: "15+ Experts",
+    description: "Dedicated team of social media specialists",
+  },
+  {
+    icon: <Globe className="h-8 w-8" />,
+    title: "Languages Supported",
+    value: "English & Luganda",
+    description: "Get help in your preferred language",
+  },
+  {
+    icon: <CheckCircle className="h-8 w-8" />,
+    title: "Resolution Rate",
+    value: "99.8%",
+    description: "We resolve almost all issues on first contact",
+  },
+]
+
+export function SupportSection() {
+  return (
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
+            <Badge variant="secondary" className="bg-green-100 text-green-800">
+              Support Team Online
+            </Badge>
+          </div>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">24/7 Live Chat Support</h2>
+          <p className="mt-4 text-gray-600 md:text-xl max-w-3xl mx-auto">
+            Get instant help from our dedicated support team through live chat. Our experts are always online to assist
+            you from order placement to delivery completion.
+          </p>
+        </div>
+
+        {/* Live Chat Support Card */}
+        <div className="max-w-md mx-auto mb-16">
+          <Card className="relative overflow-hidden transition-all hover:shadow-lg border-green-500 shadow-md">
+            <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center py-1 text-xs font-medium">
+              Available 24/7
+            </div>
+            <CardHeader className="text-center pt-8">
+              <div className="h-16 w-16 rounded-full bg-green-500 text-white flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="h-8 w-8" />
+              </div>
+              <CardTitle className="text-2xl">Live Chat Support</CardTitle>
+              <p className="text-gray-600">Get instant help from our support experts</p>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-500">Availability:</span>
+                  <span className="font-medium text-green-600">24/7 Online</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-500">Response Time:</span>
+                  <span className="font-medium text-green-600">{"< 2 minutes"}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-500">Resolution Rate:</span>
+                  <span className="font-medium text-green-600">99.8%</span>
+                </div>
+              </div>
+              <Button className="w-full bg-green-500 hover:bg-green-600 text-white text-lg py-6">
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Start Live Chat Now
+              </Button>
+              <p className="text-xs text-gray-500 text-center mt-3">No registration required • Instant connection</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Support Stats */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
+          {supportStats.map((stat, index) => (
+            <Card key={index} className="text-center border-none bg-white shadow-sm">
+              <CardContent className="p-6">
+                <div className="h-12 w-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-4">
+                  {stat.icon}
+                </div>
+                <h3 className="font-bold text-2xl text-purple-700 mb-1">{stat.value}</h3>
+                <p className="font-medium text-gray-800 mb-2">{stat.title}</p>
+                <p className="text-sm text-gray-600">{stat.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Support Features */}
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 md:p-12">
+          <div className="grid gap-8 lg:grid-cols-2 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">Why Our Live Chat Support is Different</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="h-3 w-3" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Instant Connection</h4>
+                    <p className="text-gray-600 text-sm">
+                      Connect with our experts immediately - no waiting in queues or callback requests.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="h-3 w-3" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Expert Knowledge</h4>
+                    <p className="text-gray-600 text-sm">
+                      Our team consists of social media marketing experts who understand your needs.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="h-3 w-3" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Proactive Monitoring</h4>
+                    <p className="text-gray-600 text-sm">
+                      We monitor your orders and reach out through chat if we notice any issues.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="h-3 w-3" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Real-time Problem Solving</h4>
+                    <p className="text-gray-600 text-sm">
+                      Get immediate solutions and see your issues resolved in real-time through chat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <Card className="bg-white shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+                      <Headphones className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Live Support Chat</h4>
+                      <div className="flex items-center gap-2">
+                        <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs text-green-600">Online now</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="bg-gray-100 rounded-lg p-3 text-sm">
+                      Hi! I need help with my Instagram followers order.
+                    </div>
+                    <div className="bg-green-500 text-white rounded-lg p-3 text-sm ml-4">
+                      Hello! I'd be happy to help. Can you provide your order number?
+                    </div>
+                    <div className="bg-gray-100 rounded-lg p-3 text-sm">It's #SB12345</div>
+                    <div className="bg-green-500 text-white rounded-lg p-3 text-sm ml-4">
+                      Perfect! I can see your order is processing and will be completed within 2 hours. I'll send you
+                      updates!
+                    </div>
+                    <div className="bg-gray-100 rounded-lg p-3 text-sm">
+                      Thank you! That was so quick and helpful! 😊
+                    </div>
+                  </div>
+                  <div className="mt-4 text-xs text-gray-500 text-center">Average response time: 47 seconds</div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+
+        {/* Chat Features */}
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <Card className="text-center bg-white shadow-sm">
+            <CardContent className="p-6">
+              <div className="h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
+                <Zap className="h-6 w-6" />
+              </div>
+              <h3 className="font-bold mb-2">Instant Responses</h3>
+              <p className="text-sm text-gray-600">Get answers to your questions within seconds, not hours or days.</p>
+            </CardContent>
+          </Card>
+          <Card className="text-center bg-white shadow-sm">
+            <CardContent className="p-6">
+              <div className="h-12 w-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-4">
+                <Users className="h-6 w-6" />
+              </div>
+              <h3 className="font-bold mb-2">Expert Agents</h3>
+              <p className="text-sm text-gray-600">Chat with specialists who know social media marketing inside out.</p>
+            </CardContent>
+          </Card>
+          <Card className="text-center bg-white shadow-sm">
+            <CardContent className="p-6">
+              <div className="h-12 w-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-6 w-6" />
+              </div>
+              <h3 className="font-bold mb-2">Problem Solved</h3>
+              <p className="text-sm text-gray-600">99.8% of issues resolved in the first chat conversation.</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Emergency Support */}
+        <div className="mt-16 text-center">
+          <Card className="max-w-2xl mx-auto bg-red-50 border-red-200">
+            <CardContent className="p-8">
+              <div className="h-12 w-12 rounded-full bg-red-500 text-white flex items-center justify-center mx-auto mb-4">
+                <Zap className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-red-800">Urgent Issue?</h3>
+              <p className="text-red-700 mb-6">
+                If you have an urgent issue that needs immediate attention, use our priority chat for instant help.
+              </p>
+              <Button className="bg-red-500 hover:bg-red-600 text-white">
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Start Priority Chat
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  )
+}
+import { Card, CardContent } from "@/components/ui/card"
+import { Star } from "lucide-react"
+
+interface TestimonialCardProps {
+  name: string
+  role: string
+  content: string
+  rating: number
+}
+
+export function TestimonialCard({ name, role, content, rating }: TestimonialCardProps) {
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg">
+      <CardContent className="p-6">
+        <div className="flex mb-4">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} className={`h-4 w-4 ${i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`} />
+          ))}
+        </div>
+        <p className="text-gray-600 mb-6">"{content}"</p>
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400"></div>
+          <div>
+            <p className="font-medium">{name}</p>
+            <p className="text-sm text-gray-500">{role}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+smm-heart-hand.jpg
+import type { Config } from "tailwindcss"
+
+const config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
